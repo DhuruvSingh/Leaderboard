@@ -8,7 +8,30 @@
     <title>Leaderboard</title>
 </head>
 <body>
-    <h1 id="heading">hua</h1>
+    <section>
+        <h1 id="heading">Leaderboard</h1>
+        <div class="main">
+            <div class="leaderBoard">
+                <div class="listContainer">
+                    <div class="scores">
+                        <h2 class="title">Recent Scores</h2>
+                        <button type="button" id="refreshBtn">Refresh</button>
+                    </div>
+                    <div id="scoreList"></div>
+                </div>
+            </div>
+            
+            <div class="detailsForm">
+                <h2 class="title">Add your score</h2>
+                <form action="">
+                    <input type="text" id="name" placeholder="Your name">
+                    <input type="number" id="score" placeholder="Your score">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div> 
+    </section>
+    
     <script type="modules" src="./index.js"></script>
 </body>
 </html>
