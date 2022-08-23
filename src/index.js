@@ -1,6 +1,8 @@
 // import _ from 'lodash';
 import './styles.css';
 
+import './modules/scores.js';
+
 const scorecard = [
   {
     id: 0,
