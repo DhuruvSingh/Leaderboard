@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap');
 
 body {
-  background-color: rgb(249, 248, 247);
   font-family: DynaPuff, sans-serif;
   background: url(./img/annie-spratt-wuc-KEIBrdE-unsplash.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -25,7 +24,7 @@ h1 {
   justify-content: center;
   color: rgb(255, 255, 255);
   opacity: 70.2%;
-  text-shadow: #d25b6e 0px 0px 25px;
+  text-shadow: #d25b6e 0 0 25px;
   border: 1px solid black;
   border-radius: 45px;
   padding-bottom: 20px;
@@ -33,7 +32,7 @@ h1 {
   margin-right: 20%;
   margin-left: 20%;
   padding-top: 20px;
-  box-shadow: #fff 0px 0px 20px;
+  box-shadow: #fff 0 0 20px;
 }
 
 .scores {
@@ -54,7 +53,7 @@ h1 {
   border: 1px solid black;
   border-radius: 6px;
   padding-bottom: 5px;
-  box-shadow: #686c4b 0px 0px 30px;
+  box-shadow: #686c4b 0 0 30px;
   background-color: #686c4b;
   color: rgb(255, 255, 255);
   opacity: 65%;
@@ -73,7 +72,7 @@ p {
   font-family: DynaPuff, sans-serif;
   color: rgb(0, 0, 0);
   opacity: 70.2%;
-  box-shadow: #b6041f 0px 0px 25px;
+  box-shadow: #b6041f 0 0 25px;
 }
 
 form {
@@ -83,7 +82,7 @@ form {
   gap: 1rem;
   border: black solid 1px;
   padding: 5px;
-  box-shadow: #686c4b 0px 0px 30px;
+  box-shadow: #686c4b 0 0 30px;
   background-color: #686c4b;
   color: rgb(255, 255, 255);
   opacity: 65%;
@@ -94,17 +93,16 @@ input {
   padding: 0.2rem;
 }
 
-input::placeholder{
+input::placeholder {
   color: #252424;
   font-family: DynaPuff, sans-serif;
-  size: 15px;
 }
 
 form button {
   width: 3.8rem;
   border: 2px solid black;
   background-color: white;
-  box-shadow: 2px 5px 4px 0px rgb(53, 53, 53);
+  box-shadow: 2px 5px 4px 0 rgb(53, 53, 53);
   border-radius: 8px;
   font-family: DynaPuff, sans-serif;
   align-self: flex-end;
@@ -126,5 +124,5 @@ form button:active {
 .title {
   color: rgb(255, 255, 255);
   opacity: 70.2%;
-  text-shadow: #b6041f 0px 0px 25px;
+  text-shadow: #b6041f 0 0 25px;
 }
