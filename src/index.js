@@ -1,35 +1,59 @@
 // import _ from 'lodash';
 import './styles.css';
 
-import './modules/scores.js';
+const newurl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const id = 'DUXqMFGkp8S21khd9Diy';
 
-const scorecard = [
-  {
-    id: 0,
-    name: 'test1',
-    score: '5000',
-  },
-  {
-    id: 1,
-    name: 'test2',
-    score: '5000',
-  },
-  {
-    id: 2,
-    name: 'test3',
-    score: '5000',
-  },
-  {
-    id: 3,
-    name: 'test4',
-    score: '5000',
-  },
-  {
-    id: 4,
-    name: 'test5',
-    score: '5000',
-  },
-];
+const form = document.querySelector('#inputForm');
+const nameInput = document.querySelector('#name');
+const scoreInput = document.querySelector('#score');
 
-document.getElementById('scoreList').innerHTML = scorecard.map((items) => `
-<p class="eachScore">${items.name}: ${items.score}</p>`).join(' ');
+async function postData(url = '', data = {}) {
+  const response = await fetch(url, {
+    method: 'POST',
+    credentials: 'same-origin',
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    body: data,
+  });
+
+  return response.json();
+}
+
+form.addEventListener('click', () => {
+  const user = nameInput.value;
+  const score = scoreInput.value;
+  const dataToSend = JSON.stringify({ score, user });
+  postData(`${newurl}games/${id}/scores/`, dataToSend);
+  nameInput.value = '';
+  scoreInput.value = '';
+});
+
+async function getData(url = '') {
+  const response = await fetch(url, {
+    method: 'GET',
+    credentials: 'same-origin',
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer',
+  });
+
+  return response.json();
+}
+
+const myScores = () => {
+  getData(`${newurl}games/${id}/scores/`).then((res) => {
+    document.getElementById('scoreList').innerHTML = res.result.map((items) => `
+    <p class="eachScore">${items.user}: ${items.score}</p>`).join(' ');
+  });
+};
+
+myScores();
+
+const refresh = document.getElementById('refreshBtn');
+
+refresh.addEventListener('click', () => {
+  myScores();
+});
