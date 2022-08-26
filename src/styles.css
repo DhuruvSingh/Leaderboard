@@ -25,7 +25,15 @@ h1 {
   justify-content: center;
   color: rgb(255, 255, 255);
   opacity: 70.2%;
-  text-shadow: #b6041f 0px 0px 25px;
+  text-shadow: #d25b6e 0px 0px 25px;
+  border: 1px solid black;
+  border-radius: 45px;
+  padding-bottom: 20px;
+  background-color: #686c4b;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding-top: 20px;
+  box-shadow: #fff 0px 0px 20px;
 }
 
 .scores {
