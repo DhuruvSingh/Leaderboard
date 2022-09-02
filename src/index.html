@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Leaderboard</title>
+</head>
+<body>
+    <section>
+        <h1 id="heading">Leaderboard</h1>
+        <div class="main">
+            <div class="leaderBoard">
+                <div class="listContainer">
+                    <div class="scores">
+                        <h2 class="title">Recent Scores</h2>
+                        <button type="button" id="refreshBtn">Refresh</button>
+                    </div>
+                    <div id="scoreList"></div>
+                </div>
+            </div>
+            
+            <div class="detailsForm">
+                <h2 class="title">Add your score</h2>
+                <form action="#">
+                    <input type="text" id="name" placeholder="Your name">
+                    <input type="number" id="score" placeholder="Your score">
+                    <button type="submit" id="inputForm">Submit</button>
+                </form>
+            </div>
+        </div> 
+    </section>
+    
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
